@@ -2,101 +2,234 @@
   place-items: center;
   display: grid;
   height: 100vh;
-  background-color: yellow;
 }
 body {
   padding: 0;
   margin: 0;
+  background-color: black;
 }
 .Present {
-  width: 750px;
-  height: 500px;
+  width: 700px;
+  height: 650px;
   border: 5px solid rgb(1, 26, 248);
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-.Present input {
-  margin: 10px;
-  width: 300px;
-  height: 40px;
+.front {
+  color: gold;
+  margin: 20px;
+  font-size: 55px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.inputs input {
+  margin: 20px;
+  width: 250px;
+  height: 50px;
   border: 2px solid rgb(1, 26, 248);
+  border-radius: 8px;
   background-color: transparent;
   padding-left: 10px;
-  color: black;
-  font-size: 15px;
+  color: white;
+  font-size: 17px;
+}
+.form-control {
+  width: 600px;
+  padding-bottom: 70px;
+}
+.inputs {
+  display: flex;
+  padding-left: 10px;
+}
+.form-error {
+  width: 600px;
+  display: flex;
+}
+.blank-error {
+  color: red;
+  width: 200px;
+  font-size: 17px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding-left: 70px;
 }
 .Present input:focus {
   outline: none;
 }
 .Present button {
-  width: 200px;
+  width: 150px;
   height: 50px;
   border: none;
   background-color: green;
   border-radius: 10px;
   color: white;
-  font-size: 16px;
-  margin-top: 45px;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 230px;
 }
 .Present button:hover {
   cursor: pointer;
   background-color: red;
 }
 .chatbox {
-  width: 750px;
-  height: 500px;
+  width: 700px;
+  height: 650px;
   border: 5px solid rgb(1, 26, 248);
   border-radius: 10px;
+}
+.wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  height: 596px;
+}
+.online {
+  flex: 22%;
+  width: 100%;
+  color: rgb(0, 255, 13);
+  display: inline-block;
+  align-items: center;
+  border-right: 4px solid rgb(1, 26, 248);
+  font-size: 22px;
+  text-align: center;
+  padding-top: 3px;
+  overflow-y: scroll;
+}
+.roomname {
+  color: rgb(14, 216, 14);
+  font-size: 23px;
+  padding-bottom: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.leave-button {
+  color: white;
+  background-color: red;
+  font-size: 19px;
+  font-family: monospace;
+  border-radius: 5px;
+  border: none;
+}
+.online-user {
+  color: whitesmoke;
+  text-align: start;
+  padding-left: 10px;
+  padding-top: 9px;
+  font-size: 20px;
+}
+.each-user {
+  padding-left: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: rgb(0, 209, 0);
+  border-radius: 50%;
+  display: inline-block;
 }
 .messages {
-  flex: 90%;
+  flex: 78%;
   width: 100%;
+  overflow-y: scroll;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 .startMessage {
+  margin-left: 0.5px;
   flex: 10%;
   width: 100%;
+  height: 55px;
   display: flex;
   flex-direction: row;
 }
 .startMessage input {
-  flex: 85%;
-  height: calc(100%-5px);
+  flex: 86%;
+  /* height: calc(100%-5px); */
+  height: auto;
   border: none;
   padding-left: 20px;
   font-size: 20px;
+  border-bottom-left-radius: 6px;
 }
 .startMessage button {
-  flex: 15%;
-  height: 100%;
+  flex: 14%;
+  height: 55px;
   border: none;
   background-color: green;
   color: white;
-  font-size: 18px;
+  font-size: 19px;
+  border-bottom-right-radius: 6px;
 }
-.singleMessage {
-  width: 250px;
-  height: 40px;
-  border-radius: 10px;
+.single {
+  inline-size: auto;
+  border-radius: 4px;
   display: grid;
-  place-items: center;
-  background-color: green;
+  background-color: #00ff008c;
   color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 12px;
+  margin-top: 8px;
+}
+.single#You {
+  justify-content: flex-start;
+  background-color: gray;
 }
 .joinee {
-  width: 400px;
-  margin-left: 170px;
+  width: 100%;
   display: grid;
   place-items: center;
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 4px;
+  color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.only-user {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+  margin-left: 4px;
+}
+.singleMessage {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 20px;
+  margin-top: 3px;
+  font-size: large;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+}
+.location {
+  color: darkblue;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+  #primary {
+    width: 67%;
+  }
+  #secondary {
+    width: 30%;
+    margin-left: 3%;
+  }
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+  #primary {
+    width: 100%;
+  }
+  #secondary {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
 }
